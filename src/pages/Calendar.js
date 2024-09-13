@@ -14,11 +14,6 @@ function Calendar() {
           initialView="dayGridMonth"
           height={'auto'}
 
-          headerToolbar={{
-            start: "prev next",
-            center: "title",
-            end: "dayGridMonth dayGridWeek"
-          }}
           locale={'ko'}
           events={[
             { title: '회원', date: '2024-09-02' },
