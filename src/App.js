@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useOutlet } from 'react-router';
+import './App.css'
+import Navbar from './pages/Navbar';
+import Sidebar from './pages/Sidebar';
+
+
 
 function App() {
+
+  //현재 route 된 정보를 출력해주는 hook
+  const currentOutlet = useOutlet()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <Navbar/>
+      <div className='content-area'>
+        <Sidebar/>
+        <div className='maincontent'>{currentOutlet}</div>
+      </div>
+    </>
   );
 }
 
