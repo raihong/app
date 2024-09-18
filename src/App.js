@@ -1,7 +1,8 @@
 import { useOutlet } from 'react-router';
 import './App.css'
-import Navbar from './pages/Navbar';
-import Sidebar from './pages/Sidebar';
+import Navbar from './layout/Navbar';
+import Sidebar from './layout/Sidebar';
+import Footer from './layout/Footer';
 
 
 
